@@ -1,17 +1,28 @@
-# Virtual environment
-venv/
-.env/
-
-# Python cache files
+# Python
+*.pyc
+*.pyo
+*.pyd
 __pycache__/
-*.py[cod]
+*.so
 
-# Django specific
+# Django
 *.log
-*.sqlite3
+*.pot
+*.pyc
+__pycache__/
 db.sqlite3
-/static/
-/media/
+*.sqlite3
+*.sqlite
 
-# Environment variables
-.env
+# Ignore static files collected by Django
+/staticfiles/
+
+# Ignore local development files
+*.env
+.vscode/
+.idea/
+
+# Ignore virtual environments
+venv/
+ENV/
+env/

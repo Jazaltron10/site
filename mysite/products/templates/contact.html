@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<h2>Contact Us</h2>
+<p>If you have any questions, feel free to reach out to us through the form below.</p>
+
+<form>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea><br>
+
+    <input type="submit" value="Send Message" style="background-color: #00FF00; color: #000000; padding: 10px; border: none;">
+</form>
+{% endblock %}
