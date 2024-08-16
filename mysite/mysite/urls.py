@@ -24,5 +24,6 @@ urlpatterns = [
     path('polls/', include('polls.urls')),  # Include the polls app URLs
     path('', views.home, name='home'),  # Add this line for the root URL
     path('', include('school.urls')),  # Include the URLs from school
+    path('', include('products.urls')),  # Include the URLs from products
 ]
 
