@@ -25,5 +25,6 @@ urlpatterns = [
     path('', views.home, name='home'),  # Add this line for the root URL
     path('', include('school.urls')),  # Include the URLs from school
     path('', include('products.urls')),  # Include the URLs from products
+    path('', include('core.urls')),  # Include the URLs from core
 ]
 
