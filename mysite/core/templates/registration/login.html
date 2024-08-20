@@ -1,0 +1,9 @@
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>  <!-- Error message if login fails -->
+{% endif %}
+
+<form method="post" action="{% url 'login' %}">  <!-- Form begins, POST method used for secure data transmission -->
+    {% csrf_token %}  <!-- Security token to protect against CSRF attacks -->
+    {{ form.as_p }}  <!-- Renders the form fields in paragraphs -->
+    <button type="submit">Login</button>  <!-- Button to submit the login form -->
+</form>

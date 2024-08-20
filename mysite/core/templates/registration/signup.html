@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Sign Up{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/core.css' %}" />
+  </head>
+  <body>
+    <main>
+        {% block content %}
+        <!-- Header for the signup form -->
+        <h2>Sign Up</h2>
+        
+        <!-- Form begins; POST method is used to send data securely -->
+        <form action="#" method="post">
+
+            {% csrf_token %} <!--Security token to prevent Cross-Site Request Forgery attacks-->
+
+            {{form.as_p}} <!--Renders the form fields, placing each field inside a paragraph <p> tag -->
+            
+            <button type="submit">Sign Up</button> <!--Button to submit the form-->
+            
+        </form>
+
+        {% endblock %}
+    </main>
+    <footer>
+      <p>&copy; 2024 My Site</p>
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
